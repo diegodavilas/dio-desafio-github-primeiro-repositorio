@@ -1,0 +1,61 @@
+PROCESSO DE CRIAÇÃO DA CHAVE SSH
+1 - Criar chave SSH:
+    $ ssh-keygen -t ed25519 -C diegodavilas@gmail.com
+2 - Colocar uma senha
+3 - Entrar na pasta onde o arquivo foi criado
+4 - Lista o conteúdo do diretório
+5 - Mostrar o conteúdo da chave pública 
+    $ cat nome_da_chave_publica.pub
+6 - Copia o conteúdo da chave pública
+7 - No github.com -> Settings -> SSH and GPG keys -> New SSH key
+    Adiciona apelido e cola o conteúdo da chave pública (passo 6)
+8 - Inicia o ssh-agente em backgroud 
+    $ eval $(ssh-agent -s)
+9 - $ ssh-add nome_da_chave_privada
+
+CRIAR TOKEN DE ACESSO PESSOAL
+1 - No github.com -> settings -> Developer settings -> Personal access tokens -> Generate new token
+2 - Em Note coloque uma descrição da sua chave
+3 - Determine o tempo que o token expirará
+4 - Ative a caixa Repo
+5 - Clique no botão Generate token
+6 - Copie e guarde o token em um arquivo.
+
+CONFIGURAÇÃO INICIAL DO GIT (PRIMEIRO VEZ À USAR O GIT)
+Dentro da pasta de trabalho
+1 - $ git init
+2 - Configura no git o mesmo email utilizado na criação do login no github.com
+   $ git config --global user.email "diegodavilas@gmail.com"
+3 - Configura no git o mesmo nome utilizado na criação do login no github.com
+    $ git config --global user.name diegodavilas
+
+LISTA AS CONFIGURAÇÕES DO GIT
+$ git config -- list
+
+ADICIONAR E COMITAR CONTEÚDO NO GIT
+$ git add *
+$ git commit -m "MENSAGEM INFORMANDO O QUE ESTÁ SENDO ADICIONADO"
+
+ADICIONAR ORIGEM REMOTA DO github.com
+$ git remote add origin <https copiado do repositório do github.com>
+exemplo: $ git remote add origin https://github.com/diegodavilas/Codigos-Ciencia-da-Computacao.git
+
+LISTAR ORIGENS REMOTAS CADASTRADAS
+$ git remote -v
+
+EMPURRA O CÓDIGO LOCAL PARA O REPOSTÓRIO REMOTO
+$ git push origin master
+ou 
+$ git push origin main
+
+PUXA O REPOSTÓRO REMOTO DIVERGENTE PARA PARA O LOCAL
+$ git pull origin master
+ou 
+$ git pull origin main
+
+CLONAR UM REPOSITÓRIO REMOTO
+1 - No github.com -> Abrir o repositório -> Copiar o HTTPS
+2 - No terminal abrir a pasta onde será clonado (baixado) o repositório.
+3 - $ git clone <https do repositório remoto>
+
+
