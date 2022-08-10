@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html> >>todo conteúdo estará dentro dessa tag
+    <head> >> contem meta informações que são utilizadas pelo navegador
+        <meta> >> como o navegador faz o incode dos caracteres
+        <title></title> >> coloca o título na aba do navegador
+    </head> >> 
+    <body> >> conteúdo da página
+    </body>
+</html>
